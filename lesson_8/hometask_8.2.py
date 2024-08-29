@@ -1,7 +1,7 @@
 import string
 
 
-def is_palindrome(text: str) -> True or False:
+def is_palindrome(text: str) -> bool:
     for p in string.punctuation:
         text = text.replace(p, "")
     text = text.lower()

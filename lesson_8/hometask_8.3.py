@@ -1,4 +1,7 @@
-def find_unique_value(some_list: list) -> int or float:
+from typing import Union
+
+
+def find_unique_value(some_list: list[int]) -> Union[int, float]:
     for i, el in enumerate(some_list):
         some_list.count(el)
         if some_list.count(el) == 1:
