@@ -1,4 +1,4 @@
-def common_elements():
+def common_elements() -> set[int]:
     first_range = set(range(0, 100, 3))
     second_range = set(range(0, 100, 5))
     return first_range.intersection(second_range)
