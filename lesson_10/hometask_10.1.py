@@ -1,16 +1,18 @@
 from inspect import isgenerator
+from typing import Iterator
 
 
 def pow(x: int) -> int:
     return x ** 2
 
 
-def some_gen(begin: int, end: int, func):
+def some_gen(begin: int, end: int, func) -> Iterator[int]:
     """
      Sequence created by some function
      begin: first element in sequence
      end: number elements in sequence
      func: function that forms value for sequence
+     return: Iterator for the resulting sequence
     """
     previous_number = begin
     for i in range(end):
