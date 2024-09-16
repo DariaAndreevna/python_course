@@ -1,7 +1,8 @@
 from inspect import isgenerator
+from typing import Generator
 
 
-def generate_cube_numbers(end: int) -> callable([int]):
+def generate_cube_numbers(end: int) -> Generator:
     """
     Sequence created by some function
     :param end: maximum value of sequence

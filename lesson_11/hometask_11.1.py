@@ -1,5 +1,6 @@
 from inspect import isgenerator
 from math import sqrt
+from typing import Generator
 
 
 def is_prime(number: int) -> bool:
@@ -14,7 +15,7 @@ def is_prime(number: int) -> bool:
     return True
 
 
-def prime_generator(end: int) -> callable([int]):
+def prime_generator(end: int) -> Generator:
     """
     Sequence created from prime numbers
     :param end: the final number of sequence
