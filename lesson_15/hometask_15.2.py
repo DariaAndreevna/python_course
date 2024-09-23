@@ -3,22 +3,22 @@ class Fraction:
         self.a = a
         self.b = b
 
-    def __mul__(self, other):
+    def __mul__(self, other: 'Fraction') -> 'Fraction':
         return Fraction(self.a * other.a, self.b * other.b)
 
-    def __add__(self, other):
+    def __add__(self, other: 'Fraction') -> 'Fraction':
         return Fraction((self.a * other.b + other.a * self.b), self.b * other.b)
 
-    def __sub__(self, other):
+    def __sub__(self, other: 'Fraction') -> 'Fraction':
         return Fraction((self.a * other.b - other.a * self.b), self.b * other.b)
 
-    def __eq__(self, other):
+    def __eq__(self, other: 'Fraction') -> bool:
         return (self.a * other.b) == (self.b * other.a)
 
-    def __gt__(self, other):
+    def __gt__(self, other: 'Fraction') -> bool:
         return (self.a * other.b) > (self.b * other.a)
 
-    def __lt__(self, other):
+    def __lt__(self, other: 'Fraction') -> bool:
         return (self.a * other.b) < (self.b * other.a)
 
     def __str__(self) -> str:

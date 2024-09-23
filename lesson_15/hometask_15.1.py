@@ -7,14 +7,14 @@ class Rectangle:
     def get_square(self) -> int:
         return self.width * self.height
 
-    def __eq__(self, other) -> bool:
+    def __eq__(self, other: 'Rectangle') -> bool:
         return self.get_square() == other.get_square()
 
-    def __add__(self, other):
+    def __add__(self, other: 'Rectangle') -> 'Rectangle':
         new_r_square = self.get_square() + other.get_square()
         return Rectangle(self.width, new_r_square // self.width)
 
-    def __mul__(self, n: int):
+    def __mul__(self, n: int) -> 'Rectangle':
         return Rectangle(self.width * n, self.height)
 
     def __str__(self) -> str:
