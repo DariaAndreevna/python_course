@@ -1,9 +1,9 @@
 class Counter:
 
     def __init__(self, current=1, min_value=0, max_value=10):
-        self.current = current
-        self.min_value = min_value
-        self.max_value = max_value
+        self.current: int = current
+        self.min_value: int = min_value
+        self.max_value: int = max_value
 
     def set_current(self, start: int):
         self.current = start
